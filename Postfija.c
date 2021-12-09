@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#define TAM_PILA 10
+#define PILA_TAM 5
 
 typedef struct
 {
@@ -20,7 +20,7 @@ int main()
 {
     Pila pila;
     int i = 0;
-    char operacion[20];
+    char oper[20];
 
     Operacion(oper);
     Postfija(&pila,oper,&i);
@@ -31,7 +31,7 @@ void Operacion(char op[20])
 {
 
     printf("Operacion:\n");
-    scanf("%s",&op[]);
+    scanf("%s",&op[1]);
     op[strlen(op)+1]=' ';
 }
 
@@ -40,7 +40,7 @@ void inicializaPila(Pila *p)
     p->tope = -1;
 }
 
-int apila(Pila *p, char operador)
+int apila(Pila *p, char oper)
 {
     int Apila = 0;
 
